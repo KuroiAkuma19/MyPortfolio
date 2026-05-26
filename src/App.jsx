@@ -150,24 +150,24 @@ function App() {
         <ThreeBackdrop />
       </Suspense>
 
-      <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-6 lg:px-8">
-        <header className="flex flex-wrap items-center justify-between gap-4 rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-xl">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+        <header className="flex flex-wrap items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-xl">
           <div>
-            <p className="text-xs uppercase tracking-[0.45em] text-cyan-200/75">{profile.name}</p>
+            <p className="text-xs uppercase tracking-tight md:tracking-[0.45em] text-cyan-200/75">{profile.name}</p>
             <p className="mt-1 text-sm text-slate-300">{profile.handle}</p>
           </div>
 
           <nav className="flex flex-wrap gap-3 text-sm text-slate-200">
             <button
               type="button"
-              className={`rounded-full border px-4 py-2 transition ${page === 'home' ? 'border-cyan-300/60 bg-cyan-300/10 text-cyan-100' : 'border-white/10 hover:border-cyan-300/50 hover:bg-white/10'}`}
+              className={`rounded-lg border px-3 py-1.5 sm:px-4 sm:py-2 transition ${page === 'home' ? 'border-cyan-300/60 bg-cyan-300/10 text-cyan-100' : 'border-white/10 hover:border-cyan-300/50 hover:bg-white/10'}`}
               onClick={() => setPage('home')}
             >
               Home
             </button>
             <button
               type="button"
-              className={`rounded-full border px-4 py-2 transition ${page === 'projects' ? 'border-cyan-300/60 bg-cyan-300/10 text-cyan-100' : 'border-white/10 hover:border-cyan-300/50 hover:bg-white/10'}`}
+              className={`rounded-lg border px-3 py-1.5 sm:px-4 sm:py-2 transition ${page === 'projects' ? 'border-cyan-300/60 bg-cyan-300/10 text-cyan-100' : 'border-white/10 hover:border-cyan-300/50 hover:bg-white/10'}`}
               onClick={() => setPage('projects')}
             >
               All Projects
@@ -177,17 +177,17 @@ function App() {
 
         {page === 'home' ? (
           <>
-            <section className="grid flex-1 items-start gap-14 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+            <section className="grid flex-1 items-start gap-6 py-6 sm:py-8 md:grid-cols-[1.1fr_0.9fr] lg:py-20">
               <div className="space-y-8">
-                <div className="space-y-6">
-                  <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-8xl">
+                    <div className="space-y-6">
+                      <h1 className="max-w-full text-xl font-semibold leading-snug tracking-tight text-white sm:text-2xl md:text-4xl lg:text-8xl lg:leading-[0.95]">
                     Building practical projects with a clean, visual edge.
                   </h1>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
                   <a
-                    className="git-btn rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950"
+                    className="git-btn rounded-lg bg-cyan-300 px-4 py-2 sm:px-6 sm:py-3 text-sm font-semibold text-slate-950"
                     href={profile.github}
                     target="_blank"
                     rel="noreferrer"
@@ -197,22 +197,22 @@ function App() {
                 </div>
               </div>
 
-              <aside className="relative self-start pt-6 lg:pt-10">
-                <div className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle,_rgba(16,185,129,0.18),_transparent_60%)] blur-3xl" />
-                <div className="card relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/40 p-8 pb-10 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
+              <aside className="relative self-start pt-2 sm:pt-4 lg:pt-10 flex-shrink-0">
+                <div className="absolute inset-0 lg:-inset-6 rounded-[2rem] bg-[radial-gradient(circle,_rgba(16,185,129,0.18),_transparent_60%)] blur-3xl" />
+                <div className="card profile-card relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/40 p-7 pb-8 shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl w-full">
                   <div className="flex items-center gap-4 border-b border-white/10 pb-5">
                     <img
-                      className="h-20 w-20 rounded-2xl border border-white/10 object-cover"
+                      className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl border border-white/10 object-cover"
                       src={profile.avatar}
                       alt={`${profile.name} avatar`}
                     />
                     <div>
                       <p className="text-xs uppercase tracking-[0.4em] text-slate-400">Profile</p>
-                      <h2 className="mt-2 text-2xl font-semibold text-white">{profile.name}</h2>
+                      <h2 className="mt-2 text-xl sm:text-2xl font-semibold text-white">{profile.name}</h2>
                     </div>
                   </div>
 
-                  <div className="space-y-5 py-6 text-sm leading-7 text-slate-200">
+                  <div className="space-y-5 py-4 sm:py-6 text-sm leading-7 text-slate-200">
                     <section className="space-y-2">
                       <p className="text-xs uppercase tracking-[0.35em] text-slate-400">Education</p>
                       <p>
@@ -237,14 +237,14 @@ function App() {
 
                     <section className="space-y-2">
                       <p className="text-xs uppercase tracking-[0.35em] text-slate-400">Socials / Contact info</p>
-                        <div className="text-slate-100">
+                        <div className="text-slate-100 socials-contact-info">
                           {[
                             { label: 'LinkedIn', href: profile.linkedin },
                             { label: 'X', href: profile.x },
                             { label: 'GitHub', href: profile.github },
                             { label: profile.email, href: `mailto:${profile.email}` },
-                          ].map((item, i, all) => (
-                            <span key={item.href} className="inline">
+                          ].map((item) => (
+                            <span key={item.href} className="social-item inline-block">
                               <a
                                 className="inline text-slate-100 transition hover:text-cyan-200"
                                 href={item.href}
@@ -253,24 +253,23 @@ function App() {
                               >
                                 {item.label}
                               </a>
-                              {i < all.length - 1 ? <span className="mx-2 text-slate-500">,</span> : null}
                             </span>
                           ))}
                         </div>
                     </section>
                   </div>
 
-                  <div className="border-t border-white/10 pt-5 text-sm text-slate-100">
+                  <div className="border-t border-white/10 pt-4 text-sm text-slate-100">
                     {profile.location} · {profile.handle}
                   </div>
                 </div>
               </aside>
             </section>
 
-            <section className="grid gap-6 py-10 lg:grid-cols-[0.9fr_1.1fr]">
-              <article className="card rounded-[2rem] border border-white/10 bg-slate-950/40 p-7 backdrop-blur-xl">
+            <section className="grid gap-6 py-8 sm:py-10 lg:grid-cols-[0.9fr_1.1fr]">
+              <article className="card rounded-[2rem] border border-white/10 bg-slate-950/40 p-6 sm:p-7 backdrop-blur-xl w-full">
                 <p className="text-xs uppercase tracking-[0.4em] text-slate-400">About</p>
-                <h2 className="mt-4 text-3xl font-semibold text-white">
+                <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight">
                   I build high-utility software by getting things working first.
                 </h2>
                 <div className="mt-4 space-y-4 max-w-2xl text-sm leading-7 text-slate-300">

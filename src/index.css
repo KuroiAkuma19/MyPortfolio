@@ -104,3 +104,168 @@ a {
 .transition-safe {
   transition-property: transform, opacity, box-shadow, border-color;
 }
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  height: auto;
+  min-height: 0;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .profile-card {
+    min-height: 420px;
+  }
+}
+
+.socials-contact-info {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.socials-contact-info {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  align-items: center;
+}
+
+.social-item {
+  display: inline-block;
+}
+.social-item:not(:last-child)::after {
+  content: ',';
+  color: rgba(148,163,184,0.7);
+  margin-left: 0.45rem;
+  margin-right: 0.45rem;
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 0.9rem !important;
+    line-height: 1.02 !important;
+    max-width: 100% !important;
+  }
+
+  h2 {
+    font-size: 0.85rem !important;
+    line-height: 1.12 !important;
+  }
+
+  .git-btn {
+    padding: 0.24rem 0.6rem !important;
+    font-size: 0.8rem !important;
+    border-radius: 0.4rem !important;
+  }
+
+  header {
+    padding: 0.5rem 0.8rem !important;
+  }
+
+  nav button {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .card {
+    padding: 0.35rem !important;
+    border-radius: 0.6rem !important;
+  }
+
+  .card img {
+    height: 32px !important;
+    width: 32px !important;
+  }
+
+  .text-sm, p, li {
+    font-size: 0.92rem !important;
+  }
+
+  .grid {
+    gap: 0.6rem !important;
+  }
+  .max-w-4xl { max-width: 100% !important; }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 0.82rem !important;
+    line-height: 1.05 !important;
+  }
+
+  h2 {
+    font-size: 0.78rem !important;
+  }
+
+  .git-btn {
+    padding: 0.28rem 0.6rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  nav button {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  .card {
+    padding: 0.35rem !important;
+    border-radius: 0.6rem !important;
+  }
+
+  .card img {
+    height: 34px !important;
+    width: 34px !important;
+  }
+
+  .text-sm, p, li {
+    font-size: 0.88rem !important;
+  }
+
+  .px-4 { padding-left: 0.6rem !important; padding-right: 0.6rem !important; }
+  .px-6 { padding-left: 0.6rem !important; padding-right: 0.6rem !important; }
+
+  @media (max-width: 320px) {
+    h1 { font-size: 0.9rem !important; line-height: 1.02 !important; }
+    h2 { font-size: 0.82rem !important; }
+
+    .git-btn { padding: 0.2rem 0.5rem !important; font-size: 0.78rem !important; }
+    nav button { padding: 0.18rem 0.42rem !important; font-size: 0.78rem !important; }
+
+    header { padding: 0.3rem 0.5rem !important; }
+
+    .card { padding: 0.25rem !important; border-radius: 0.5rem !important; }
+    .card img { height: 28px !important; width: 28px !important; }
+
+    .text-sm, p, li { font-size: 0.78rem !important; }
+    .grid { gap: 0.4rem !important; }
+
+    .uppercase, .text-xs.uppercase { letter-spacing: 0.06em !important; }
+
+    .three-canvas { display: none !important; }
+    body::before { display: none !important; }
+
+    .max-w-7xl { max-width: 100% !important; padding-left: 0.4rem !important; padding-right: 0.4rem !important; }
+  }
+
+  h1 { font-size: 0.95rem !important; }
+  h2 { font-size: 0.9rem !important; }
+  .text-sm, p, li { font-size: 0.82rem !important; }
+}
+ 
+@media (max-width: 320px) {
+  h1 { font-size: 0.75rem !important; line-height: 1.02 !important; }
+  h2 { font-size: 0.7rem !important; }
+  .git-btn { padding: 0.18rem 0.42rem !important; font-size: 0.7rem !important; }
+  nav button { padding: 0.14rem 0.36rem !important; font-size: 0.7rem !important; }
+  .card { padding: 0.18rem !important; border-radius: 0.4rem !important; }
+  .card img { height: 24px !important; width: 24px !important; }
+  .text-sm, p, li { font-size: 0.72rem !important; }
+  .grid { gap: 0.3rem !important; }
+  .uppercase, .text-xs.uppercase { letter-spacing: 0.04em !important; }
+  .three-canvas { display: none !important; }
+  body::before { display: none !important; }
+  .max-w-7xl { max-width: 100% !important; padding-left: 0.2rem !important; padding-right: 0.2rem !important; }
+}
