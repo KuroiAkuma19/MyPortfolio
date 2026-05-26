@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/Portfolio/',
   plugins: [react(), tailwindcss()],
+  base: "/MyPortfolio",
   build: {
     chunkSizeWarningLimit: 900,
   },
